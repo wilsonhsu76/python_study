@@ -1,7 +1,8 @@
 import unittest
 
 def fill_zeros_in_martix(matrix_t):
-    
+    if  not isinstance(matrix_t, list) or  not isinstance(matrix_t[0], list):
+        return -1 #not matrix case
     row_length = len(matrix_t)
     col_length = len(matrix_t[0])
     row_toZeros_list = [False for x in range(row_length)]

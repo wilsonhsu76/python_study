@@ -3,14 +3,14 @@ import unittest
 def rotate_matrix(matrix_t):
     
     row_length, col_length = 0, 0
-    if matrix_t is not None:
+    if isinstance(matrix_t, list) and isinstance(matrix_t[0], list):
         row_length = len(matrix_t)
         col_length = len(matrix_t[0])
     else:
-        return matrix_t #can't rotate
+        return -1 #can't rotate
 
     if row_length != col_length:
-        return matrix_t #can't rotate
+        return -1 #can't rotate
 
     for layer in range(row_length//2):
         first , last = layer, row_length-1-layer
