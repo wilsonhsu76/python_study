@@ -27,7 +27,7 @@ class Linked_list:
             self.tail = n
             return self.tail
             
-    def add_multiNodes(values):
+    def add_multiNodes(self, values):
         for value in values:
             self.add_node(value)
 
