@@ -26,6 +26,16 @@ class Linked_list:
             self.tail.next = n
             self.tail = n
             return self.tail
+			
+    def add_node_obj(self, node_obj):
+        if self.head is None:
+            self.head = self.tail = node_obj
+        else:
+            n = node_obj
+            n.prev = self.tail
+            self.tail.next = n
+            self.tail = n
+            return self.tail
             
     def add_multiNodes(self, values):
         for value in values:
