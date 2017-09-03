@@ -15,7 +15,7 @@ class Linked_list:
         self.head = None
         self.tail = None
         if values is not None:
-            add_multiNodes(values)
+            self.add_multiNodes(values)
 
     def add_node(self, value):
         if self.head is None:
